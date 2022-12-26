@@ -1,13 +1,21 @@
-import { useEffect } from 'react';
-import axios from 'axios';
+import { useEffect, useState } from 'react';
+import { getPokemonData } from '../app/axios/axiosApi';
+import { IPokemon } from '../app/interfaces/pokemonInterfaces';
 
 const App = () => {
+  const [pokemon, setPokemon] = useState<IPokemon | null>(null);
   useEffect(() => {
-    const fetchData = async () => {
-      const { data } = await axios.get('https://pokeapi.co/api/v2/pokemon/mewtwo');
-    };
+    getPokemonData('mewtwo').then((data) => {
+      console.log(data);
+      setPokemon(data);
+    });
   }, []);
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+  return (
+    <div>
+      <h1 className="font-semibold text-3xl text-blue-600">Hello World</h1>
+      <div>Your Pokémon is: {pokemon && pokemon.name}</div>
+    </div>
+  );
 };
 
 export default App;
