@@ -34,7 +34,7 @@ export default class AxiosClient implements IAxiosClient {
   private createAxiosClient(): AxiosInstance {
     // TODO: Create constants file/directory
     return Axios.create({
-      baseURL: 'https://pokeapi.co/api/v2/pokemon/',
+      baseURL: 'https://pokeapi.co/api/v2/',
       responseType: 'json',
       headers: {
         'Content-Type': 'application/json',

@@ -19,7 +19,8 @@
     "paths": {
       "@features/*": ["src/features/*"],
       "@lib/*": ["src/lib/*"],
-      "@types/*": ["src/types/*"],
+      "@pages/*": ["src/pages/*"],
+      "@custom-types/*": ["src/types/*"],
       "@utils/*": ["src/utils/*"]
     },
     "types": ["node"]
