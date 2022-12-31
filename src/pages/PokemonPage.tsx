@@ -13,9 +13,11 @@ const PokemonPage = () => {
   }, []);
   return (
     <div>
-      <h1>
-        {pokemon?.name} #{pokemon?.id}
-      </h1>
+      {pokemon && (
+        <h1>
+          {pokemon.name} #{pokemon.id}
+        </h1>
+      )}
     </div>
   );
 };
