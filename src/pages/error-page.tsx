@@ -1,6 +1,6 @@
-import unown_o from '../assets/unown_o.png';
-import unown_p from '../assets/unown_p.png';
-import unown_s from '../assets/unown_s.png';
+import unown_o from '../assets/media/unown_o.png';
+import unown_p from '../assets/media/unown_p.png';
+import unown_s from '../assets/media/unown_s.png';
 
 const ErrorPage = () => {
   return (
